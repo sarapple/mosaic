@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<body>
+    <style>
+    .row {
+        display: block;
+        width: 100vw;
+    }
+    .triangle-wrapper{
+        display: block;
+        margin: 0 auto;
+    }
+    .svg-wrapper {
+        display: block;
+        margin: 1em;
+    }
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+    #fileDisplayArea{
+        max-height: 50vh;
+        max-width: 80vw;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .thumb {
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    </style>
+    <div class="row">
+        <button onclick="exportSVG()">SVG ME</button>
+        <a href="" id="link">SVG ME</a>
+    </div>
+    <div class="row">
+        <form id="imgFile" name="imgFile" enctype="multipart/form-data" method="post">
+            <fieldset>
+                <h2>Img File - Scroll to See Entire Image</h2>
+                <input type='file' id='img-fileinput'>
+                <div id="fileDisplayArea" class="thumb"></div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="row">
+        <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+            <fieldset>
+                <h2>Json File</h2>
+                <input type='file' id='fileinput'>
+            </fieldset>
+        </form>
+    </div>
+    <div class="row">
+        <div id="download">
+        </div>
+    </div>
+    <div class="row">
+        <div><h1>Results from Upload:</h1></div>
+        <div class="triangle-wrapper"></div>
+    </div>
+    <script src="./vendors/d3.js" charset="utf-8"></script>
+    <script src="./mosaic.js" charset="utf-8"></script>
+    <script src="./script.js" charset="utf-8"></script>
+</body>
+</html>
